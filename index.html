@@ -1,154 +1,158 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Second Story — Brand Identity</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;0,700;1,300;1,600;1,700&family=Bebas+Neue&family=Playfair+Display:ital,wght@0,900;1,400;1,700&family=DM+Mono:wght@300;400&display=swap');
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Story — Brand Identity</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,700;1,700&family=DM+Mono&display=swap');
 
-:root {
-  --mustard: #F2B705; --red: #D90416; --cobalt: #024873;
-  --gold: #BF9B5E; --cream: #FAF9F6; --black: #0D0D0D; --brown: #3D2B1F;
-}
+        :root {
+            --mustard: #F2B705; --red: #D90416; --cobalt: #024873;
+            --gold: #BF9B5E; --cream: #FAF9F6; --black: #0D0D0D;
+        }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-body {
-  background-color: #EDE8DC;
-  font-family: 'DM Mono', monospace;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 60px 20px;
-  min-height: 100vh;
-  overflow-x: hidden;
-}
+        body {
+            background-color: #EDE8DC;
+            font-family: 'DM Mono', monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            color: #333;
+        }
 
-/* Contenedor principal para que no se desarme */
-.main-container {
-  width: 100%;
-  max-width: 800px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+        .header { text-align: center; margin-bottom: 50px; opacity: 0.6; font-size: 12px; letter-spacing: 4px; }
 
-.logo-card {
-  width: 100%;
-  background: var(--cream);
-  border: 1.5px solid rgba(191,155,94,0.35);
-  padding: 60px 20px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  margin-bottom: 40px;
-}
+        .logo-card {
+            background: var(--cream);
+            width: 100%;
+            max-width: 600px;
+            padding: 80px 20px;
+            border: 1px solid var(--gold);
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            margin-bottom: 60px;
+            position: relative;
+        }
 
-.logo-second {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-size: clamp(40px, 10vw, 72px);
-  color: var(--cobalt);
-  line-height: 1;
-}
+        .logo-second {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: clamp(40px, 8vw, 70px);
+            color: var(--cobalt);
+            line-height: 1;
+        }
 
-.logo-story {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(60px, 15vw, 110px);
-  color: var(--black);
-  letter-spacing: 10px;
-  line-height: 0.8;
-}
+        .divider {
+            width: 80px; height: 2px; background: var(--mustard);
+            margin: 20px auto;
+        }
 
-.tags-row {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
-  margin-top: 40px;
-}
+        .logo-story {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(60px, 12vw, 100px);
+            color: var(--black);
+            letter-spacing: 12px;
+            line-height: 0.8;
+            margin-left: 12px; /* Compensa el letter-spacing */
+        }
 
-.tag-body {
-  width: 160px;
-  height: 280px;
-  background: white;
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px 10px;
-  box-shadow: 5px 10px 20px rgba(0,0,0,0.15);
-  position: relative;
-}
+        .tagline {
+            margin-top: 30px;
+            font-size: 10px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
 
-/* Etiquetas decorativas pequeñas */
-.section-label {
-  font-size: 10px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  opacity: 0.6;
-}
+        .tags-container {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            max-width: 800px;
+        }
 
-.palette-row {
-  display: flex;
-  width: 100%;
-  height: 60px;
-  margin-top: 40px;
-  border-radius: 4px;
-  overflow: hidden;
-}
+        .tag {
+            width: 180px;
+            height: 300px;
+            padding: 30px 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            border-radius: 2px;
+            text-align: center;
+        }
 
-.swatch { flex: 1; height: 100%; }
+        .tag-wm { font-family: 'Playfair Display', serif; font-style: italic; font-size: 22px; margin-bottom: 5px; }
+        .tag-story { font-family: 'Bebas Neue', sans-serif; font-size: 28px; letter-spacing: 3px; }
+        .tag-price { margin-top: auto; font-family: 'DM Mono'; font-weight: bold; font-size: 20px; }
 
-</style>
+        /* Estilos específicos de Tags */
+        .tag-dark { background: var(--black); color: var(--gold); }
+        .tag-cream { background: var(--cream); color: var(--cobalt); border: 1px solid #ddd; }
+        .tag-cobalt { background: var(--cobalt); color: var(--mustard); }
+
+        .palette {
+            display: flex;
+            width: 100%;
+            max-width: 600px;
+            height: 50px;
+            margin-top: 60px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .color { flex: 1; height: 100%; }
+    </style>
 </head>
 <body>
 
-<div class="main-container">
-  <p class="section-label">01 · Logo Principal</p>
-  
-  <div class="logo-card">
-    <div class="logo-second">Second</div>
-    <div style="width: 60%; height: 2px; background: var(--mustard); margin: 15px 0;"></div>
-    <div class="logo-story">STORY</div>
-    <p style="margin-top: 20px; font-size: 12px; letter-spacing: 4px; color: var(--gold);">GLAM THRIFT · EST. 2026</p>
-  </div>
+    <div class="header">BRAND IDENTITY SYSTEM · SECOND STORY</div>
 
-  <p class="section-label">02 · Swing Tags</p>
-  
-  <div class="tags-row">
-    <div class="tag-body" style="background: var(--cream);">
-      <div style="font-size: 18px; color: var(--cobalt); font-family: 'Playfair Display'; italic">Second</div>
-      <div style="font-size: 22px; color: var(--black); font-family: 'Bebas Neue';">STORY</div>
-      <div style="margin-top: auto; font-weight: bold;">$24.00</div>
+    <div class="logo-card">
+        <div class="logo-second">Second</div>
+        <div class="divider"></div>
+        <div class="logo-story">STORY</div>
+        <div class="tagline">Vintage · Curated · Glamour</div>
     </div>
-    
-    <div class="tag-body" style="background: var(--mustard);">
-      <div style="font-size: 18px; color: var(--red); font-family: 'Playfair Display'; italic">Second</div>
-      <div style="font-size: 22px; color: var(--black); font-family: 'Bebas Neue';">STORY</div>
-      <div style="margin-top: auto; font-weight: bold;">$18.00</div>
-    </div>
-    
-    <div class="tag-body" style="background: var(--black); color: var(--gold);">
-      <div style="font-size: 18px; color: var(--gold); font-family: 'Playfair Display'; italic">Second</div>
-      <div style="font-size: 22px; color: var(--cream); font-family: 'Bebas Neue';">STORY</div>
-      <div style="margin-top: auto; font-weight: bold;">$38.00</div>
-    </div>
-  </div>
 
-  <div class="palette-row">
-    <div class="swatch" style="background: var(--mustard);"></div>
-    <div class="swatch" style="background: var(--red);"></div>
-    <div class="swatch" style="background: var(--cobalt);"></div>
-    <div class="swatch" style="background: var(--gold);"></div>
-    <div class="swatch" style="background: var(--black);"></div>
-  </div>
-</div>
+    <div class="tags-container">
+        <div class="tag tag-dark">
+            <div class="tag-wm">Second</div>
+            <div class="tag-story" style="color: var(--cream)">STORY</div>
+            <div style="font-size: 8px; letter-spacing: 2px; margin-top: 10px; opacity: 0.7;">DARK GLAMOUR</div>
+            <div class="tag-price">$38.00</div>
+        </div>
+
+        <div class="tag tag-cream">
+            <div class="tag-wm">Second</div>
+            <div class="tag-story" style="color: var(--black)">STORY</div>
+            <div style="font-size: 8px; letter-spacing: 2px; margin-top: 10px; opacity: 0.7;">RETRO VINTAGE</div>
+            <div class="tag-price">$24.00</div>
+        </div>
+
+        <div class="tag tag-cobalt">
+            <div class="tag-wm">Second</div>
+            <div class="tag-story" style="color: var(--cream)">STORY</div>
+            <div style="font-size: 8px; letter-spacing: 2px; margin-top: 10px; opacity: 0.7;">HOLLYWOOD NIGHT</div>
+            <div class="tag-price">$45.00</div>
+        </div>
+    </div>
+
+    <div class="palette">
+        <div class="color" style="background: var(--mustard)"></div>
+        <div class="color" style="background: var(--red)"></div>
+        <div class="color" style="background: var(--cobalt)"></div>
+        <div class="color" style="background: var(--gold)"></div>
+        <div class="color" style="background: var(--black)"></div>
+    </div>
+
+    <p style="margin-top: 40px; font-size: 9px; letter-spacing: 3px; opacity: 0.5;">EST. 2026 · NO LOCATION</p>
 
 </body>
 </html>
